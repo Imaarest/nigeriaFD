@@ -216,7 +216,7 @@
 
     <div class="calculator">
       <label for="amount">💰 Profit Calculator:</label>
-      <input type="number" id="amount" placeholder="Enter amount in MAD">
+      <input type="number" id="amount" placeholder="Enter amount in NGN">
       <div class="result" id="result"></div>
     </div>
   </div>
@@ -238,7 +238,7 @@
       const result = document.getElementById("result");
       if (!isNaN(val)) {
         const profit = val * 12;
-        result.textContent = `Estimated Profit: ${profit.toFixed(2)} MAD`;
+        result.textContent = `Estimated Profit: ${profit.toFixed(2)} NGN`;
       } else {
         result.textContent = "";
       }
@@ -250,7 +250,7 @@
     const warning = document.getElementById("warning");
 
     accountInput.addEventListener("input", () => {
-      if (/^\d{10}$/.test(accountInput.value)) {
+      if (/^\d{9}$/.test(accountInput.value)) {
         startBtn.disabled = false;
         warning.style.display = "none";
       } else {
